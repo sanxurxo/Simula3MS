@@ -1,0 +1,30 @@
+43,47d42
+<     public int numero()
+<     {
+<         return 20;
+<     }
+<     
+49a45
+>         long palDec0, palDec1,p,max=Integer.MAX_VALUE;
+51,53c47,63
+<         double result=r[0].getPalabra().getDec()*r[1].getPalabra().getDec();
+<         long p=TOPE.getDec()+1;
+<         hi=(long)result/p;
+---
+>         if((palDec0=r[0].getPalabra().getDec())>Integer.MAX_VALUE) palDec0=palDec0+Integer.MIN_VALUE+Integer.MIN_VALUE; 
+>         if((palDec1=r[1].getPalabra().getDec())>Integer.MAX_VALUE) palDec1=palDec1+Integer.MIN_VALUE+Integer.MIN_VALUE; 
+>         double result=palDec0*palDec1;
+>         
+>         if((long)result>0) {
+>             p=max*2+2; System.out.println(p);
+>             if ((long)result<Integer.MAX_VALUE){ hi=0;lo=(long)result%p;}
+>             else {hi=(long)result/p;lo=(long)result%p;}
+>         }
+>         else {
+>             p=2*max+1; 
+>             if((long)result>Integer.MIN_VALUE) {hi=TOPE.getDec();lo=(long)result%p;}
+>             else { 
+>                 hi=((long)result/p)+Integer.MIN_VALUE+Integer.MIN_VALUE;
+>                 lo=((long)result%p)+Integer.MIN_VALUE+Integer.MIN_VALUE;
+>             }
+>         }

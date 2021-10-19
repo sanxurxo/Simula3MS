@@ -1,0 +1,47 @@
+<html>
+<body>
+
+
+
+
+<font size=+8"><strong>Quick user’s guide</strong></font>.
+<p>
+This guide summarizes the basic steps to begin working with Simula3MS.
+<ol>
+
+<li> When Simula3MS is executed, an editor window appears, that allows:</li>
+<ul>
+        <li>the load of a previously edited file</li>
+        <li>the edition of a new assemble language code</li>
+</ul>
+  
+<li> Once the code is edited (or loaded), use the Assemble button. Two results are
+possible:</li>
+	<ul>
+        <li>If the code does not have any syntactic errors, the Execute button becomes
+        enabled to give access to the simulation.</li>
+        <li>In case the code is not correct, a list with all the errors will appear at the bottom
+        of the window. The first error is highlighted. Next errors can be found using
+        Next error button. When all these errors have been corrected, repeat step 2.</li>
+	</ul>
+<li>Choose a configuration to execute the code. There are three possible options in the
+Configuration menu: Input/Output, Datapath and Branch techniques.</li>
+	<ul>
+        <li>Input/Output. The I/O is by default deactivated. To simulate I/O choose
+        Polling or Input/Output with Interrupts.</li>
+        <li>Datapath. The selected option by default is the Monocycle datapath. Selecting
+        Multicycle or any implementation of the Pipeline processor, a new window
+        will be opened, allowing to configure the latency of the floating point
+        operations.</li>
+        <li>Branch techniques. Currently Simula3MS allows the selection two branch
+        techniques: Delayed branch and Fixed branch prediction. Both of them appear
+        deactivated by default and the selection of any of these techniques forces the
+        basic pipeline.</li>
+	</ul>
+<li> Use the Execute button to access to the simulation window. In this window, the
+final result of the complete program execution is shown (using the Execute button), or
+the evolution of each instruction in each cycle can be observed (using the Next cycle
+and Previous cycle buttons).</li>
+</ol>
+</body>
+</html>

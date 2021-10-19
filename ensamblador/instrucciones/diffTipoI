@@ -1,0 +1,33 @@
+19a20,21
+> 	Character temp=new Character(direccion.charAt(0));
+> 	Character neg=new Character('-');
+21c23
+<         if(Character.isDigit(direccion.charAt(0)))
+---
+>         if(Character.isDigit(direccion.charAt(0)) || true)
+23c25
+<             
+---
+>          
+97,98d98
+<     public abstract int numero();
+<     
+120,121d119
+<     
+<     
+20d19
+<      
+23c22
+< 
+---
+>      
+26c25
+<             
+---
+>          
+100,101d98
+<     public abstract int numero();
+<     
+123,124d119
+<     
+<     

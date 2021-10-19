@@ -1,0 +1,37 @@
+60,65d59
+<     
+<     public int numero()
+<     {
+<         return 15;
+<     }
+<     
+70a65
+> 
+73,77c68,73
+<               int desp=desplazamiento/4;
+<           int des=desplazamiento%4;
+<             int direccion=(int)r[1].getPalabra().getDec();
+<             if(((direccion+(desp*4)+des)<(INICIO_PILA.getDec()+4)) && ((direccion+(desp*4)+des)>Sp.getRegistro().getPalabra().getDec()))            
+<                 r[0].setPalabra(Pila.getPila().getByte(direccion+(desp*4),des));
+---
+> 	     int desp=desplazamiento/4;
+> 	     int des=desplazamiento%4;
+> 	     int direccion=(int)r[1].getPalabra().getDec();   
+> 
+>             if(((direccion+(desp*4)+des)<(INICIO_PILA.getDec()+4)) && ((direccion+(desp*4)+des)>=Sp.getRegistro().getPalabra().getDec())){           
+>                 r[0].setPalabra(Pila.getPila().getByte(direccion+(desp*4),des));}
+79,80c75,77
+<                 if(((direccion+(desp*4)+des)>=INICIO_MEMORIA.getDec()) && ((direccion+(desp*4)+des)<=(Memoria.getMemoria().obtPosMem())))
+<                     r[0].setPalabra(Memoria.getMemoria().getByte(direccion-desplazamiento,desplazamiento)); 
+---
+>                 if(((direccion+(desp*4)+des)>=INICIO_MEMORIA.getDec()) && ((direccion+(desp*4)+des)<=(Memoria.getMemoria().obtPosMem())+4)){            
+> 		    r[0].setPalabra(Memoria.getMemoria().getByte(direccion-desplazamiento,desplazamiento));}
+> 
+105c102
+<             if(((direccion+(desp*4)+des)<(INICIO_PILA.getDec()+4)) && ((direccion+(desp*4)+des)>Sp.getRegistro().getPalabra().getDec()))            
+---
+>             if(((direccion+(desp*4)+des)<(INICIO_PILA.getDec()+4)) && ((direccion+(desp*4)+des)>=Sp.getRegistro().getPalabra().getDec()))            
+210c207
+<             if(((direccion+(desp*4)+des)<(INICIO_PILA.getDec()+4)) && ((direccion+(desp*4)+des)>Sp.getRegistro().getPalabra().getDec()))            
+---
+>             if(((direccion+(desp*4)+des)<(INICIO_PILA.getDec()+4)) && ((direccion+(desp*4)+des)>=Sp.getRegistro().getPalabra().getDec()))            
