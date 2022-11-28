@@ -62,8 +62,8 @@ import ensamblador.registros.S4;
 import ensamblador.registros.S5;
 import ensamblador.registros.S6;
 import ensamblador.registros.S7;
-import ensamblador.registros.S8;
-import ensamblador.registros.S9;
+import ensamblador.registros.FP;
+import ensamblador.registros.T9;
 import ensamblador.registros.Sp;
 import ensamblador.registros.Status;
 import ensamblador.registros.T0;
@@ -487,8 +487,8 @@ return false;}
             case REG_T8:
                 r=T8.getRegistro();
                 break;
-            case REG_S9:
-                r=S9.getRegistro();
+            case REG_T9:
+                r=T9.getRegistro();
                 break;
             case REG_K0:
             	r=K0.getRegistro();
@@ -499,8 +499,8 @@ return false;}
             case REG_SP:
                 r=Sp.getRegistro();
                 break;
-            case REG_S8:
-                r=S8.getRegistro();
+            case REG_FP:
+                r=FP.getRegistro();
                 break;
            default:
             case REG_RA:

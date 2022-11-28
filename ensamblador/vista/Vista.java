@@ -61,7 +61,7 @@ public abstract class Vista extends javax.swing.JFrame implements Observer, Tipo
         $at = new javax.swing.JLabel();
         $t1 = new javax.swing.JLabel();
         $s1 = new javax.swing.JLabel();
-        $s9 = new javax.swing.JLabel();
+        $t9 = new javax.swing.JLabel();
         $v0 = new javax.swing.JLabel();
         $t2 = new javax.swing.JLabel();
         $s2 = new javax.swing.JLabel();
@@ -81,7 +81,7 @@ public abstract class Vista extends javax.swing.JFrame implements Observer, Tipo
         $a2 = new javax.swing.JLabel();
         $t6 = new javax.swing.JLabel();
         $s6 = new javax.swing.JLabel();
-        $s8 = new javax.swing.JLabel();
+        $fp = new javax.swing.JLabel();
         $a3 = new javax.swing.JLabel();
         $t7 = new javax.swing.JLabel();
         $s7 = new javax.swing.JLabel();
@@ -541,10 +541,10 @@ public abstract class Vista extends javax.swing.JFrame implements Observer, Tipo
 	        $s1.setText("$s1=00000000");
 	        jPanel32.add($s1);
 
-	        $s9.setFont(new java.awt.Font("Dialog", 0, 10));
-	        $s9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-	        $s9.setText("$s9=00000000");
-	        jPanel32.add($s9);
+	        $t9.setFont(new java.awt.Font("Dialog", 0, 10));
+	        $t9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+	        $t9.setText("$t9=00000000");
+	        jPanel32.add($t9);
 
 	        $v0.setFont(new java.awt.Font("Dialog", 0, 10));
 	        $v0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -641,10 +641,10 @@ public abstract class Vista extends javax.swing.JFrame implements Observer, Tipo
 	        $s6.setText("$s6=00000000");
 	        jPanel32.add($s6);
 
-	        $s8.setFont(new java.awt.Font("Dialog", 0, 10));
-	        $s8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-	        $s8.setText("$s8=00000000");
-	        jPanel32.add($s8);
+	        $fp.setFont(new java.awt.Font("Dialog", 0, 10));
+	        $fp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+	        $fp.setText("$fp=00000000");
+	        jPanel32.add($fp);
 
 	        $a3.setFont(new java.awt.Font("Dialog", 0, 10));
 	        $a3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1084,8 +1084,8 @@ public abstract class Vista extends javax.swing.JFrame implements Observer, Tipo
     protected javax.swing.JLabel $s5;
     protected javax.swing.JLabel $s6;
     protected javax.swing.JLabel $s7;
-    protected javax.swing.JLabel $s8;
-    protected javax.swing.JLabel $s9;
+    protected javax.swing.JLabel $fp;
+    protected javax.swing.JLabel $t9;
     protected javax.swing.JLabel $sp;
     protected javax.swing.JLabel $t0;
     protected javax.swing.JLabel $t1;

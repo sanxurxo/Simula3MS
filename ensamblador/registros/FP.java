@@ -2,18 +2,18 @@
 package ensamblador.registros;
 
 
-public class S8 extends Registro {
+public class FP extends Registro {
     
-     private S8() 
+     private FP()
     {
         inicializar();
     }
-    public final static S8 s8 =new S8();
+    public final static FP fp =new FP();
  
-    public static S8 getRegistro()
+    public static FP getRegistro()
     {
        
-        return s8;
+        return fp;
     }
     
     public int numReg()
@@ -27,6 +27,6 @@ public class S8 extends Registro {
     }    
 
     public String toString(){
-    	return new String("S8");
+    	return new String("FP");
     }
 }

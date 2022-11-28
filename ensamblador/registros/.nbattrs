@@ -158,11 +158,11 @@
     <fileobject name="S7.java">
         <attr name="class_dependency_ensamblador.registros.Registro" stringvalue="S7"/>
     </fileobject>
-    <fileobject name="S8.java">
-        <attr name="class_dependency_ensamblador.registros.Registro" stringvalue="S8"/>
+    <fileobject name="FP.java">
+        <attr name="class_dependency_ensamblador.registros.Registro" stringvalue="FP"/>
     </fileobject>
-    <fileobject name="S9.java">
-        <attr name="class_dependency_ensamblador.registros.Registro" stringvalue="S9"/>
+    <fileobject name="T9.java">
+        <attr name="class_dependency_ensamblador.registros.Registro" stringvalue="T9"/>
     </fileobject>
     <fileobject name="Sp.java">
         <attr name="class_dependency_ensamblador.registros.Registro" stringvalue="Sp"/>
