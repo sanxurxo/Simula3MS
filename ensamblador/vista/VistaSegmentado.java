@@ -143,7 +143,7 @@ public class VistaSegmentado extends Vista implements Observer, Tipos {
         $at = new javax.swing.JLabel();
         $t1 = new javax.swing.JLabel();
         $s1 = new javax.swing.JLabel();
-        $s9 = new javax.swing.JLabel();
+        $t9 = new javax.swing.JLabel();
         $v0 = new javax.swing.JLabel();
         $t2 = new javax.swing.JLabel();
         $s2 = new javax.swing.JLabel();
@@ -163,7 +163,7 @@ public class VistaSegmentado extends Vista implements Observer, Tipos {
         $a2 = new javax.swing.JLabel();
         $t6 = new javax.swing.JLabel();
         $s6 = new javax.swing.JLabel();
-        $s8 = new javax.swing.JLabel();
+        $fp = new javax.swing.JLabel();
         $a3 = new javax.swing.JLabel();
         $t7 = new javax.swing.JLabel();
         $s7 = new javax.swing.JLabel();
@@ -411,10 +411,10 @@ public class VistaSegmentado extends Vista implements Observer, Tipos {
         $s1.setText("$s1=00000000");
         jPanel32.add($s1);
 
-        $s9.setFont(new java.awt.Font("Dialog", 0, 10));
-        $s9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        $s9.setText("$s9=00000000");
-        jPanel32.add($s9);
+        $t9.setFont(new java.awt.Font("Dialog", 0, 10));
+        $t9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        $t9.setText("$t9=00000000");
+        jPanel32.add($t9);
 
         $v0.setFont(new java.awt.Font("Dialog", 0, 10));
         $v0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -511,10 +511,10 @@ public class VistaSegmentado extends Vista implements Observer, Tipos {
         $s6.setText("$s6=00000000");
         jPanel32.add($s6);
 
-        $s8.setFont(new java.awt.Font("Dialog", 0, 10));
-        $s8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        $s8.setText("$s8=00000000");
-        jPanel32.add($s8);
+        $fp.setFont(new java.awt.Font("Dialog", 0, 10));
+        $fp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        $fp.setText("$fp=00000000");
+        jPanel32.add($fp);
 
         $a3.setFont(new java.awt.Font("Dialog", 0, 10));
         $a3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1620,15 +1620,15 @@ public class VistaSegmentado extends Vista implements Observer, Tipos {
             case REG_T8:
                 $t8.setText("$t8="+valor);
                 break;
-            case REG_S9:
-                $s9.setText("$s9="+valor);
+            case REG_T9:
+                $t9.setText("$t9="+valor);
                 break;                               
             case REG_SP:
             	
                 $sp.setText("$sp="+valor);
                 break;
-            case REG_S8:
-                $s8.setText("$s8="+valor);
+            case REG_FP:
+                $fp.setText("$fp="+valor);
                 break;
             case REG_RA:
                 $ra.setText("$ra="+valor);
@@ -2044,8 +2044,8 @@ public class VistaSegmentado extends Vista implements Observer, Tipos {
     private javax.swing.JLabel $s5;
     private javax.swing.JLabel $s6;
     private javax.swing.JLabel $s7;
-    private javax.swing.JLabel $s8;
-    private javax.swing.JLabel $s9;
+    private javax.swing.JLabel $fp;
+    private javax.swing.JLabel $t9;
     private javax.swing.JLabel $sp;
     private javax.swing.JLabel $t0;
     private javax.swing.JLabel $t1;

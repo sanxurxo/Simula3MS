@@ -2,18 +2,18 @@
 package ensamblador.registros;
 
 
-public class S9 extends Registro {
+public class T9 extends Registro {
     
-     private S9() 
+     private T9()
     {
         inicializar();
     }
-    public final static S9 s9 =new S9();
+    public final static T9 t9 =new T9();
  
-    public static S9 getRegistro()
+    public static T9 getRegistro()
     {
        
-        return s9;
+        return t9;
     }
     
     public int numReg()
@@ -27,6 +27,6 @@ public class S9 extends Registro {
     }    
 
     public String toString(){
-    	return new String("S9");
+    	return new String("T9");
     }
 }
