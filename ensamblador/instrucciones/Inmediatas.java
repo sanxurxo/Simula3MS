@@ -49,7 +49,7 @@ private String imagSegmentado[]={"inmediatasIF.gif","inmediatasID.gif","inmediat
 		}
 		else { 
 
-			Long.parseLong(param[numParam]);   
+            Short.parseShort(param[numParam]);
 
 		}
             }catch(NumberFormatException e){
