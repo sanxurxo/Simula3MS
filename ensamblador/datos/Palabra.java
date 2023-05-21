@@ -108,7 +108,7 @@ public class Palabra implements ensamblador.datos.Tipos {
     public Palabra(long p)
     {
         palDec=p;
-        palBin=Long.toBinaryString(palDec);
+        palBin=Integer.toBinaryString((int) palDec);
         while(palBin.length()<32)
             palBin="0"+palBin;
         palHex=Long.toHexString(palDec);
