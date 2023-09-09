@@ -251,12 +251,18 @@ public class Ensamblar extends Observable implements Tipos{
 			token=st.nextToken();
 			if ((token.toString()).equals("main"))
 			{                    
-				token=st.nextToken();            
-				if ((token.toString()).equals("main:"))
+				token = st.nextToken("\n");
+				if (token.contains("main:"))
 				{
-					Etiquetas etiquetas=setEtiquetas(tx);
-					ERROR=this.separaInstrucciones(st, false);
+					setEtiquetas(tx);
 
+					StringTokenizer stToCheckNoInstructionsAfterMainLabel = new StringTokenizer(token);
+					if (!stToCheckNoInstructionsAfterMainLabel.nextToken().equals("main:")
+							|| stToCheckNoInstructionsAfterMainLabel.hasMoreTokens())
+					{
+						ERROR = token + lenguaje.getString("instruccionNoValida");
+					}
+					else ERROR = this.separaInstrucciones(st, false);
 				}
 				else                    
 					ERROR=lenguaje.getString("faltaMain");                               
