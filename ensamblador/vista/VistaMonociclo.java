@@ -484,6 +484,9 @@ public class VistaMonociclo extends Vista implements Observer, Tipos {
             case REG_ZERO:
                 $zero.setText("$zero="+valor);
                 break;
+            case REG_AT:
+                $at.setText("$at="+valor);
+                break;
             case REG_V0:
                 $v0.setText("$v0="+valor);
                 break;
