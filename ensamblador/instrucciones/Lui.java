@@ -32,9 +32,9 @@ public class Lui extends Inmediatas {
         if(param[numParam()].startsWith("0x")){
      	
         	String h=param[numParam()];
-        	h=h+"0000"; /*Completamos con 0s pq el valor que se indica en una instruccion lui son los 16 bits mas significativos*/
-        	
-        	int tamanho=h.length()-2;
+        	/* Completamos con 0s pq el valor que se indica en una instruccion lui son los 16 bits mas significativos */
+            h = "0x0000" + h.substring(2);
+
             Long dec=Long.decode(h);
            	long palDec=dec.parseLong(dec.toString());
             String palBin=Long.toBinaryString(palDec);
@@ -77,11 +77,7 @@ public class Lui extends Inmediatas {
         	inmediato=inmediato/((topeLui.getDec()+1));            
 //            except=0;
         }                  
-        Palabra p;
-        if(inmediato>0){
-        	p=new Palabra((topeLui.getDec()+1)*((int)inmediato));
-        }else
-        	p=new Palabra(inmediato);
+        Palabra p = new Palabra((topeLui.getDec() + 1) * ((int) inmediato));
        
         r.setPalabra(p);       
         boolean_pc=true;
