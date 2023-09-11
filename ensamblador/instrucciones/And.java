@@ -55,7 +55,7 @@ public class And extends TipoR {
         imagen_etapa=new StringBuffer();
         int except=-1;
         imagen_etapa.append(direccion_multi).append("R_etapa4");
-        long resultado=r[1].getPalabra().getDec()+r[2].getPalabra().getDec();
+        long resultado = r[1].getPalabra().getDec() & r[2].getPalabra().getDec();
                       
         r[0].setPalabra(new Palabra(resultado));        
         boolean_dato=true;
