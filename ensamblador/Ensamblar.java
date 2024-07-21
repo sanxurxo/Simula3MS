@@ -252,6 +252,12 @@ public class Ensamblar extends Observable implements Tipos{
 			if ((token.toString()).equals("main"))
 			{                    
 				token = st.nextToken("\n");
+
+				if (token.trim().isBlank()) {
+
+					token = st.nextToken();
+				}
+
 				if (token.contains("main:"))
 				{
 					setEtiquetas(tx);
