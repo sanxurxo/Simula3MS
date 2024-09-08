@@ -148,7 +148,7 @@ public abstract class Instruccion implements ensamblador.datos.Tipos{
                             case REG_T:
                                 if(reg.length()==3) 
                                 {                                                          
-                                     if((posicion>=0) &&  (posicion<9))
+                                     if((posicion>=0) &&  (posicion<10))
                                         esRegistro=true;
                                 }
                                 break;
@@ -165,6 +165,13 @@ public abstract class Instruccion implements ensamblador.datos.Tipos{
                                     if(reg.equals("$ra"))
                                         esRegistro=true;
                                 }
+                                break;
+
+                            case REG_F:
+                                if (reg.equals("$fp"))
+                                    esRegistro=true;
+                                break;
+
                             case REG_K:
                             	 if(reg.length()==3) 
                                  {                                                          
