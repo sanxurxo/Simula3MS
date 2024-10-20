@@ -260,7 +260,7 @@ public class VistaSegmentado extends Vista implements Observer, Tipos {
 
         getContentPane().setLayout(new java.awt.BorderLayout(0, 5));
 
-        setResizable(false);
+        setResizable(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 exitForm(evt);
