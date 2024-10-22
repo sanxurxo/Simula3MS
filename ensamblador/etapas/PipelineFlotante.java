@@ -26,6 +26,9 @@ import java.util.*;
  **/
 public class PipelineFlotante implements Tipos{
     
+    /* determina si se ignora la instruccion del hueco de retardo en instrucciones j */
+    private static final boolean IGNORAR_HUECO_RETARDO_J = false;
+
     private static PipelineFlotante pipeline = null;
     private IF etapaIF;
     private ID etapaID;
@@ -126,7 +129,8 @@ public class PipelineFlotante implements Tipos{
     }
     
     public boolean activarIFFlush() {
-    	if(etapaID.getEstadoInstruccion().getInstruccion().toString().startsWith("j")) 
+      if(IGNORAR_HUECO_RETARDO_J
+         && etapaID.getEstadoInstruccion().getInstruccion().toString().startsWith("j")) 
     		activarIFFlush = true;
     	return activarIFFlush;
     }
