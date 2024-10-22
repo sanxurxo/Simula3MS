@@ -583,9 +583,18 @@ public class DialogoSegmentado extends javax.swing.JDialog {
         comboLatMult.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         comboLatDiv.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
-        comboLatAdd.setSelectedIndex(1);
-        comboLatMult.setSelectedIndex(3);
-        comboLatDiv.setSelectedIndex(6);
+        Vector<Vector> fus = ensamblador.getFus();
+        if (fus.size() >= 3) {
+          /* si ya se han seleccionado latencias anteriormente, mantener esos valores */
+          comboLatAdd.setSelectedIndex(((Vector<Integer>)fus.elementAt(0)).elementAt(1) - 1);
+          comboLatMult.setSelectedIndex(((Vector<Integer>)fus.elementAt(1)).elementAt(1) - 1);
+          comboLatDiv.setSelectedIndex(((Vector<Integer>)fus.elementAt(2)).elementAt(1) - 1);
+        } else {
+          /* si no, utilizar latencias por defecto: (2, 4, 7) */
+          comboLatAdd.setSelectedIndex(1);
+          comboLatMult.setSelectedIndex(3);
+          comboLatDiv.setSelectedIndex(6);
+        }
         
         buttonAceptar.setText(lenguaje.getString("aceptar"));
         buttonAceptar.addActionListener(new java.awt.event.ActionListener() {
