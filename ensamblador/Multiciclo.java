@@ -5,6 +5,10 @@
 
 package ensamblador;
 
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowStateListener;
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
@@ -214,6 +218,80 @@ public class Multiciclo extends javax.swing.JFrame implements Observer, Tipos {
         jPanel28 = new javax.swing.JPanel();
 
         getContentPane().setLayout(new java.awt.BorderLayout(0, 5));
+
+        // Add a ComponentListener to listen for resize events
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+
+                Dimension newSize = getSize();
+
+                if (Objects.isNull(normalWindowWidth) || Objects.isNull(normalWindowHeight)) {
+
+                    normalWindowWidth = newSize.width;
+                    normalWindowHeight = newSize.height;
+                }
+
+                if (normalWindowWidth <= newSize.width && normalWindowHeight <= newSize.height) {
+
+                    jPanel16.setMaximumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*33187/normalWindowHeight));
+                    jPanel16.setMinimumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*427/normalWindowHeight));
+                    jPanel16.setPreferredSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*425/normalWindowHeight));
+
+                    panelReg.setMaximumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*420/normalWindowHeight));
+                    panelReg.setMinimumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*420/normalWindowHeight));
+                    panelReg.setPreferredSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*420/normalWindowHeight));
+
+                    jPanel4.setMaximumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*250/normalWindowHeight));
+                    jPanel4.setMinimumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*250/normalWindowHeight));
+                    jPanel4.setPreferredSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*250/normalWindowHeight));
+
+                    jPanel25.setMaximumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*32767/normalWindowHeight));
+                    jPanel25.setMinimumSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*47/normalWindowHeight));
+                    jPanel25.setPreferredSize(new java.awt.Dimension(newSize.width*420/normalWindowWidth, newSize.height*44/normalWindowHeight));
+
+                    jPanel5.setMaximumSize(new java.awt.Dimension(newSize.width*650/normalWindowWidth, newSize.height*420/normalWindowHeight));
+                    jPanel5.setMinimumSize(new java.awt.Dimension(newSize.width*650/normalWindowWidth, newSize.height*420/normalWindowHeight));
+                    jPanel5.setPreferredSize(new java.awt.Dimension(newSize.width*650/normalWindowWidth, newSize.height*420/normalWindowHeight));
+
+                    jPanel26.setMaximumSize(new java.awt.Dimension(newSize.width*1180/normalWindowWidth, newSize.height*32767/normalWindowHeight));
+                    jPanel26.setMinimumSize(new java.awt.Dimension(newSize.width*31/normalWindowWidth, newSize.height*47/normalWindowHeight));
+                    jPanel26.setPreferredSize(new java.awt.Dimension(newSize.width*650/normalWindowWidth, newSize.height*40/normalWindowHeight));
+
+                    jScrollPane2.setMaximumSize(new java.awt.Dimension(newSize.width*1180/normalWindowWidth, newSize.height*32767/normalWindowHeight));
+                    jScrollPane2.setMinimumSize(new java.awt.Dimension(newSize.width*1180/normalWindowWidth, newSize.height*22/normalWindowHeight));
+                    jScrollPane2.setPreferredSize(new java.awt.Dimension(newSize.width*90/normalWindowWidth, newSize.height*15/normalWindowHeight));
+
+                    segTexto.setMaximumSize(new java.awt.Dimension(newSize.width*650/normalWindowWidth, newSize.height*2147483647/normalWindowHeight));
+                    segTexto.setMinimumSize(new java.awt.Dimension(newSize.width*650/normalWindowWidth, newSize.height*15/normalWindowHeight));
+                    segTexto.setPreferredSize(new java.awt.Dimension(newSize.width*650/normalWindowWidth, newSize.height*15/normalWindowHeight));
+
+                    botonVolverEdit.setMaximumSize(new java.awt.Dimension(newSize.width*80/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonVolverEdit.setMinimumSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonVolverEdit.setPreferredSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*26/normalWindowHeight));
+
+                    botonPasoAnt.setMaximumSize(new java.awt.Dimension(newSize.width*70/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonPasoAnt.setMinimumSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonPasoAnt.setPreferredSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*26/normalWindowHeight));
+
+                    botonPasoSig.setMaximumSize(new java.awt.Dimension(newSize.width*70/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonPasoSig.setMinimumSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonPasoSig.setPreferredSize(new java.awt.Dimension(newSize.width*20/normalWindowWidth, newSize.height*26/normalWindowHeight));
+
+                    botonCicloAnt.setMaximumSize(new java.awt.Dimension(newSize.width*70/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonCicloAnt.setMinimumSize(new java.awt.Dimension(newSize.width*30/normalWindowWidth, newSize.height*26/normalWindowHeight));
+                    botonCicloAnt.setPreferredSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*26/normalWindowHeight));
+
+                    botonCicloSig.setMaximumSize(new java.awt.Dimension(newSize.width*80/normalWindowWidth, newSize.height*60/normalWindowHeight));
+                    botonCicloSig.setMinimumSize(new java.awt.Dimension(newSize.width*30/normalWindowWidth, newSize.height*60/normalWindowHeight));
+                    botonCicloSig.setPreferredSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*60/normalWindowHeight));
+
+                    botonEjecutar.setMaximumSize(new java.awt.Dimension(newSize.width*80/normalWindowWidth, newSize.height*54/normalWindowHeight));
+                    botonEjecutar.setMinimumSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*54/normalWindowHeight));
+                    botonEjecutar.setPreferredSize(new java.awt.Dimension(newSize.width*10/normalWindowWidth, newSize.height*54/normalWindowHeight));
+                }
+            }
+        });
 
         setResizable(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -2332,6 +2410,8 @@ public class Multiciclo extends javax.swing.JFrame implements Observer, Tipos {
     private javax.swing.JPanel panelReg;
     private javax.swing.JEditorPane segDatos;
     private javax.swing.JTextPane segTexto;
+    private Integer normalWindowWidth;
+    private Integer normalWindowHeight;
     // End of variables declaration//GEN-END:variables
     
 }
